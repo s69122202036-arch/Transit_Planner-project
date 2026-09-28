@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>e-Ticket | ไปไหนดี</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">TN</span><span><b>ไปไหนดี</b><small>Thai Transit Graph Planner</small></span></a>
+  <nav><a href="index.html">ค้นหาเส้นทาง</a><a href="routes.html">เปรียบเทียบ</a><a href="itinerary.html">รายละเอียด</a><a class="active" href="ticket.html">e-Ticket</a></nav>
+  <span class="live-pill">DEMO TICKET</span>
+</header>
+<main>
+  <div class="page-title"><span class="eyebrow">PAGE 4 / E-TICKET</span><h1>ตั๋วเดินทาง</h1><p>สรุปผลรวม Weight และค่าโดยสารของเส้นทางที่เลือก</p></div>
+
+  <section class="ticket-shell">
+    <div class="ticket">
+      <div class="ticket-top"><div><span class="brand-mark">TN</span><div><b>ไปไหนดี</b><small>Bangkok MRT Trip Planner</small></div></div><span class="demo-badge">DEMO</span></div>
+      <div class="ticket-route"><div><small>ต้นทาง</small><b id="ticketFrom">--</b></div><span>→</span><div><small>ปลายทาง</small><b id="ticketTo">--</b></div></div>
+      <div class="ticket-body">
+        <div class="fare-table" id="fareTable"></div>
+        <div class="qr-box"><canvas id="qrCanvas" width="150" height="150"></canvas><small id="ticketCode">TN-DEMO</small></div>
+      </div>
+      <div class="ticket-total"><span>ยอดรวมค่าโดยสาร</span><strong id="ticketFare">-- บาท</strong></div>
+      <div class="ticket-meta"><span>เวลาโดยประมาณ <b id="ticketTime">--</b> นาที</span><span>ออกให้สำหรับการสาธิตเท่านั้น</span></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><div><span class="dot orange"></span><h2>หลักการคำนวณ</h2></div></div>
+    <div class="formula"><code>Total Weight = Σ w(e)</code><span>ผลรวม Weight ของ Edge บน Shortest Path</span></div>
+    <div class="formula"><code>route.legs.reduce((sum, leg) =&gt; sum + leg.fare, 0)</code><span>รวมค่าโดยสารของขาเดินทาง</span></div>
+    <div class="notice">หมายเหตุ: ค่าโดยสารในตั๋วเป็น “ค่าโดยสารอ้างอิงจริง” ของคู่สถานีที่มีการตรวจสอบกับ BEM และใช้เพื่อสาธิตแนวคิด Graph/Tree ไม่ใช่ระบบจำหน่ายตั๋วจริง</div>
+  </section>
+</main>
+<footer><span>โครงงาน Graph Theory และ Tree | Discrete Mathematics for IT</span><span>Demo only</span></footer>
+<script src="app.js"></script>
+<script>window.addEventListener('DOMContentLoaded',()=>initTicket());</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>รายละเอียดการเดินทาง | ไปไหนดี</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">TN</span><span><b>ไปไหนดี</b><small>Thai Transit Graph Planner</small></span></a>
+  <nav><a href="index.html">ค้นหาเส้นทาง</a><a href="routes.html">เปรียบเทียบ</a><a class="active" href="itinerary.html">รายละเอียด</a><a href="ticket.html">e-Ticket</a></nav>
+  <span class="live-pill">PATH RESULT</span>
+</header>
+<main>
+  <div class="page-title"><span class="eyebrow">PAGE 3 / ITINERARY DETAIL</span><h1>รายละเอียดการเดินทาง</h1><p id="itinerarySummary"></p></div>
+
+  <section class="itinerary-layout">
+    <article class="panel">
+      <div class="panel-head"><div><span class="dot blue"></span><h2>Path ที่ Dijkstra หาได้</h2></div><span class="tag">v₀ → v₁ → ... → vₖ</span></div>
+      <div id="pathVisual" class="path-visual"></div>
+      <div id="steps" class="steps"></div>
+      <div class="action-row"><a class="primary" href="ticket.html">ยืนยันเส้นทาง → e-Ticket</a><a class="secondary" href="routes.html">กลับไปเปรียบเทียบ</a></div>
+    </article>
+
+    <aside class="panel side-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Grand_Palace%2C_Bangkok-101.jpg" alt="พระบรมมหาราชวัง กรุงเทพฯ">
+      <h3>จุดหมายในเมืองจริง</h3>
+      <p>ภาพประกอบใช้สถานที่จริงในกรุงเทพฯ จาก Wikimedia Commons และระบุแหล่งที่มาใน README</p>
+      <div class="mini-stat"><b id="statTime">--</b><span>นาทีโดยประมาณ</span></div>
+      <div class="mini-stat"><b id="statFare">--</b><span>บาท • ค่าโดยสารอ้างอิง</span></div>
+    </aside>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><div><span class="dot green"></span><h2>Tree Path</h2></div><span class="tag">Root → Parent → Child → Leaf</span></div>
+    <div class="tree-path" id="treePath"></div>
+  </section>
+</main>
+<footer><span>Path = ลำดับ Vertex ที่เดินตาม Edge ได้</span><span>หน้าตั๋วใช้ผลลัพธ์จากหน้านี้</span></footer>
+<script src="app.js"></script>
+<script>window.addEventListener('DOMContentLoaded',()=>initItinerary());</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ไปไหนดี | Thai Transit Graph Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">TN</span>
+      <span><b>ไปไหนดี</b><small>Thai Transit Graph Planner</small></span>
+    </a>
+    <nav>
+      <a class="active" href="index.html">ค้นหาเส้นทาง</a>
+      <a href="routes.html">เปรียบเทียบ</a>
+      <a href="itinerary.html">รายละเอียด</a>
+      <a href="ticket.html">e-Ticket</a>
+    </nav>
+    <span class="live-pill">ข้อมูลสาธิต • กรุงเทพฯ</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">INTERACTIVE GRAPH THEORY PROJECT</span>
+        <h1>วันนี้จะไปไหน?</h1>
+        <p>วางแผนการเดินทางด้วย MRT กรุงเทพฯ โดยใช้ <b>Tree</b>, <b>Weighted Graph</b> และ <b>Dijkstra</b> เพื่อหาเส้นทางที่เหมาะสม</p>
+        <div class="hero-chips">
+          <span>Vertex = สถานี</span><span>Edge = ช่วงสถานี</span><span>Weight = เวลา</span>
+        </div>
+      </div>
+      <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/4/44/MRT-BLUELINE-BLE.jpg" alt="รถไฟฟ้า MRT สายสีน้ำเงินในกรุงเทพฯ">
+    </section>
+
+    <section class="search-card">
+      <div class="section-title">
+        <div><span class="dot blue"></span><h2>ค้นหาเส้นทาง</h2></div>
+        <span class="data-note">ค่าโดยสารอ้างอิง BEM ที่ตรวจสอบได้ • 28 ก.ย. 2569</span>
+      </div>
+      <div class="route-form">
+        <label>ต้นทาง
+          <select id="fromStation"></select>
+        </label>
+        <button class="swap" id="swapBtn" title="สลับต้นทางและปลายทาง">⇄</button>
+        <label>ปลายทาง
+          <select id="toStation"></select>
+        </label>
+        <button class="primary" id="searchBtn">ค้นหาเส้นทาง</button>
+      </div>
+      <div class="popular">
+        <span>เส้นทางอ้างอิง:</span>
+        <button data-from="BL13" data-to="BL27">สวนจตุจักร → สามย่าน <b>44 บาท</b></button>
+        <button data-from="BL01" data-to="BL13">ท่าพระ → สวนจตุจักร <b>44 บาท</b></button>
+        <button data-from="BL01" data-to="BL10">ท่าพระ → เตาปูน <b>37 บาท</b></button>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="panel">
+        <div class="panel-head">
+          <div><span class="dot orange"></span><h2>Tree: โครงสร้างการเลือกสถานี</h2></div>
+          <span class="tag">3+ ระดับ</span>
+        </div>
+        <div id="treePicker" class="tree-picker"></div>
+        <div class="tree-legend">
+          <span><i class="root"></i>Root</span><span><i class="parent"></i>Parent</span><span><i class="leaf"></i>Leaf</span>
+        </div>
+      </article>
+
+      <article class="panel photo-panel">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Wat_Arun_in_Bangkok_%281%29.jpg" alt="วัดอรุณ กรุงเทพฯ">
+        <div class="photo-caption"><b>กรุงเทพฯ</b><span>ตัวอย่างจุดหมายในเมืองจริง</span></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><span class="dot green"></span><h2>หลักการดิสครีตที่ใช้ในระบบ</h2></div></div>
+      <div class="concepts">
+        <div><b>Tree</b><span>ทุกระบบขนส่ง → MRT → สาย → สถานี (Leaf)</span></div>
+        <div><b>Graph</b><span>สถานีคือ Vertex และช่วงทางคือ Edge</span></div>
+        <div><b>Weighted Graph</b><span>Weight ของ Edge = เวลาเดินทางโดยประมาณ (นาที)</span></div>
+        <div><b>Dijkstra</b><span>คำนวณ Shortest Path จากต้นทางถึงปลายทาง</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>โครงงาน Graph Theory และ Tree | Discrete Mathematics for IT</span>
+    <span>ค่าโดยสารเป็นข้อมูลอ้างอิงจริงจากผู้ให้บริการที่ระบุใน README</span>
+  </footer>
+  <script src="app.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      initHome();
+    });
+  </script>
+</body>
+</html>

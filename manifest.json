@@ -1,0 +1,22 @@
+{
+  "project": "ไปไหนดี — Thai Transit Graph Planner",
+  "pages": [
+    "index.html",
+    "routes.html",
+    "itinerary.html",
+    "ticket.html"
+  ],
+  "math": [
+    "Tree",
+    "Weighted Graph",
+    "Adjacency List",
+    "Dijkstra",
+    "Path"
+  ],
+  "verified_data_date": "2026-09-28",
+  "image_sources": [
+    "https://commons.wikimedia.org/wiki/File:MRT-BLUELINE-BLE.jpg",
+    "https://commons.wikimedia.org/wiki/File:Wat_Arun_in_Bangkok_(1).jpg",
+    "https://commons.wikimedia.org/wiki/File:Grand_Palace,_Bangkok-101.jpg"
+  ]
+}

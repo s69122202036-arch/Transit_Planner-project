@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เปรียบเทียบเส้นทาง | ไปไหนดี</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">TN</span><span><b>ไปไหนดี</b><small>Thai Transit Graph Planner</small></span></a>
+  <nav><a href="index.html">ค้นหาเส้นทาง</a><a class="active" href="routes.html">เปรียบเทียบ</a><a href="itinerary.html">รายละเอียด</a><a href="ticket.html">e-Ticket</a></nav>
+  <span class="live-pill">WEIGHTED GRAPH</span>
+</header>
+<main>
+  <div class="page-title"><span class="eyebrow">PAGE 2 / COMPARE ROUTES</span><h1>เปรียบเทียบเส้นทาง</h1><p id="routeSummary"></p></div>
+
+  <section class="route-cards" id="routeCards"></section>
+
+  <section class="panel">
+    <div class="panel-head"><div><span class="dot blue"></span><h2>Graph Visualization</h2></div><span class="tag">Vertex ≥ 6 • Edge ≥ 7 • Path</span></div>
+    <div class="graph-wrap">
+      <svg id="graphSvg" viewBox="0 0 1000 430" role="img" aria-label="กราฟเส้นทาง MRT สายสีน้ำเงินและสายสีม่วง"></svg>
+    </div>
+    <div class="graph-info">
+      <div><b>Vertex</b><span>สถานี เช่น BL13 = สวนจตุจักร</span></div>
+      <div><b>Edge</b><span>ช่วงเชื่อมระหว่างสถานี</span></div>
+      <div><b>Weight</b><span>เวลาเดินทางโดยประมาณ (นาที)</span></div>
+      <div><b>Path</b><span id="pathText">กำลังคำนวณ...</span></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><div><span class="dot orange"></span><h2>Adjacency List (JavaScript)</h2></div></div>
+    <pre id="adjacency" class="code-box"></pre>
+  </section>
+</main>
+<footer><span>Graph Theory: Weighted Graph + Dijkstra</span><span>ข้อมูลค่าโดยสารอ้างอิงจาก BEM</span></footer>
+<script src="app.js"></script>
+<script>window.addEventListener('DOMContentLoaded',()=>initRoutes());</script>
+</body>
+</html>

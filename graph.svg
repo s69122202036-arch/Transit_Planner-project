@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+<rect width="1200" height="500" fill="#f7fbff"/>
+<text x="40" y="45" font-family="Arial" font-size="26" font-weight="700" fill="#132238">Weighted Graph — MRT Bangkok</text>
+<text x="40" y="72" font-family="Arial" font-size="14" fill="#66798e">Vertex = Station • Edge = Connection • Weight = Approx. travel time (minutes)</text>
+<g stroke="#b8c8d9" stroke-width="4" fill="none">
+<path d="M80 250 H180 H280 H380 H480 H580 H680 H780 H880 H980 H1080"/>
+</g>
+<g stroke="#0b7cff" stroke-width="7" fill="none"><path d="M80 250 H180 H280 H380 H480 H580 H680"/></g>
+<g stroke="#ff9b24" stroke-width="4" stroke-dasharray="9 9"><path d="M1080 250 L1080 390"/></g>
+<g font-family="Arial" text-anchor="middle">
+<g fill="#fff" stroke="#0b7cff" stroke-width="4">
+<circle cx="80" cy="250" r="24"/><circle cx="180" cy="250" r="24"/><circle cx="280" cy="250" r="24"/><circle cx="380" cy="250" r="24"/><circle cx="480" cy="250" r="24"/><circle cx="580" cy="250" r="24"/><circle cx="680" cy="250" r="24"/>
+</g>
+<g fill="#fff" stroke="#7e95ad" stroke-width="3"><circle cx="780" cy="250" r="24"/><circle cx="880" cy="250" r="24"/><circle cx="980" cy="250" r="24"/><circle cx="1080" cy="250" r="24"/><circle cx="1080" cy="390" r="24"/></g>
+<g font-size="11" font-weight="700" fill="#132238">
+<text x="80" y="254">BL01</text><text x="180" y="254">BL32</text><text x="280" y="254">BL31</text><text x="380" y="254">BL30</text><text x="480" y="254">BL29</text><text x="580" y="254">BL28</text><text x="680" y="254">BL27</text><text x="780" y="254">BL22</text><text x="880" y="254">BL17</text><text x="980" y="254">BL15</text><text x="1080" y="254">BL13</text><text x="1080" y="394">PP11</text>
+</g>
+<g font-size="11" fill="#66798e">
+<text x="130" y="235">2m</text><text x="230" y="235">2m</text><text x="330" y="235">2m</text><text x="430" y="235">2m</text><text x="530" y="235">2m</text><text x="630" y="235">3m</text><text x="730" y="235">3m</text><text x="830" y="235">3m</text><text x="930" y="235">3m</text><text x="1030" y="235">3m</text><text x="1105" y="325">6m transfer</text>
+</g>
+</g>
+</svg>

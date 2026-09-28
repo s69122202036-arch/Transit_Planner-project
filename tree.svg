@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="1100" height="620" fill="#fff"/>
+<text x="40" y="42" font-family="Arial" font-size="26" font-weight="700" fill="#132238">Tree — โครงสร้างเลือกสถานี</text>
+<text x="40" y="68" font-family="Arial" font-size="14" fill="#66798e">Root → Parent → Parent → Leaf</text>
+<g stroke="#cbd7e5" stroke-width="3" fill="none">
+<path d="M550 120 V180 M550 180 H350 V245 M550 180 H750 V245 M350 245 V310 M750 245 V310"/>
+<path d="M350 310 H120 M350 310 H250 M350 310 H380 M350 310 H510 M750 310 H670 M750 310 H850 M750 310 H980"/>
+<path d="M120 310 V400 M250 310 V400 M380 310 V400 M510 310 V400 M670 310 V400 M850 310 V400 M980 310 V400"/>
+</g>
+<g font-family="Arial" text-anchor="middle">
+<rect x="430" y="85" width="240" height="50" rx="12" fill="#fff5e8" stroke="#ff9b24" stroke-width="3"/><text x="550" y="116" font-size="16" font-weight="700">Root: ทุกระบบขนส่ง</text>
+<rect x="430" y="180" width="240" height="50" rx="12" fill="#eaf4ff" stroke="#0b7cff" stroke-width="3"/><text x="550" y="211" font-size="16" font-weight="700">Parent: รถไฟฟ้า MRT</text>
+<rect x="230" y="245" width="240" height="50" rx="12" fill="#eaf4ff" stroke="#0b7cff" stroke-width="3"/><text x="350" y="276" font-size="15" font-weight="700">Parent: สายสีน้ำเงิน</text>
+<rect x="630" y="245" width="240" height="50" rx="12" fill="#eaf4ff" stroke="#0b7cff" stroke-width="3"/><text x="750" y="276" font-size="15" font-weight="700">Parent: สายสีม่วง</text>
+<g fill="#ecfaf3" stroke="#20a36a" stroke-width="2">
+<rect x="55" y="400" width="130" height="45" rx="10"/><rect x="185" y="400" width="130" height="45" rx="10"/><rect x="315" y="400" width="130" height="45" rx="10"/><rect x="445" y="400" width="130" height="45" rx="10"/><rect x="605" y="400" width="130" height="45" rx="10"/><rect x="785" y="400" width="130" height="45" rx="10"/><rect x="915" y="400" width="130" height="45" rx="10"/>
+</g>
+<g font-size="12" font-weight="700" fill="#132238">
+<text x="120" y="428">ท่าพระ</text><text x="250" y="428">สนามไชย</text><text x="380" y="428">สามยอด</text><text x="510" y="428">สามย่าน</text><text x="670" y="428">สุขุมวิท</text><text x="850" y="428">เตาปูน</text><text x="980" y="428">ศูนย์ราชการนนท์</text>
+</g>
+<text x="550" y="515" font-family="Arial" text-anchor="middle" font-size="14" fill="#66798e">Leaf = สถานีที่ไม่มี children • Path ตัวอย่าง: ทุกระบบขนส่ง → MRT → สายสีน้ำเงิน → สามย่าน</text>
+</g>
+</svg>
